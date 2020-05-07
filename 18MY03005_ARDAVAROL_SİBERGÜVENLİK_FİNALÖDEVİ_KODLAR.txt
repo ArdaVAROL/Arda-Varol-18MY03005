@@ -1,0 +1,92 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+using System.Xml;
+using System.Xml.Linq;
+
+namespace SiberFinal÷devi
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            //CONSOLE EKRANINDA G÷Z‹KMES› ›«›N
+            XElement document = XElement.Load("outputbir.xml");
+            XElement s = document.Element("script");
+            Console.Write(s);
+            XElement element = document.Element("host");
+            Console.WriteLine(element);
+
+            XElement document2 = XElement.Load("outputiki.xml");
+            XElement ss = document2.Element("script");
+            Console.Write(ss);
+            XElement element2 = document2.Element("host");
+            Console.WriteLine(element2);
+
+            XElement document3 = XElement.Load("outputuc.xml");
+            XElement sss = document3.Element("script");
+            Console.Write(sss);
+            XElement element3 = document3.Element("host");
+            Console.WriteLine(element3);
+
+            XElement document4 = XElement.Load("outputdort.xml");
+            XElement ssss = document4.Element("script");
+            Console.Write(ssss);
+            XElement element4 = document4.Element("host");
+            Console.WriteLine(element4);
+
+            XElement document5 = XElement.Load("outputbes.xml");
+            XElement sssss = document5.Element("script");
+            Console.Write(sssss);
+            XElement element5 = document5.Element("host");
+            Console.WriteLine(element5);
+            a();
+        }
+        static void a()
+        {
+            using (StreamWriter writer = new StreamWriter("toplamaoutput.xml"))
+            {
+                Console.SetOut(writer);
+                XElement document = XElement.Load("outputbir.xml");
+                XElement s = document.Element("script");
+                Console.Write(s);
+                XElement element = document.Element("host");
+                Console.WriteLine(element);
+
+                XElement document2 = XElement.Load("outputiki.xml");
+                XElement ss = document2.Element("script");
+                Console.Write(ss);
+                XElement element2 = document2.Element("host");
+                Console.WriteLine(element2);
+
+                XElement document3 = XElement.Load("outputuc.xml");
+                XElement sss = document3.Element("script");
+                Console.Write(sss);
+                XElement element3 = document3.Element("host");
+                Console.WriteLine(element3);
+
+                XElement document4 = XElement.Load("outputdort.xml");
+                XElement ssss = document4.Element("script");
+                Console.Write(ssss);
+                XElement element4 = document4.Element("host");
+                Console.WriteLine(element4);
+
+                XElement document5 = XElement.Load("outputbes.xml");
+                XElement sssss = document5.Element("script");
+                Console.Write(sssss);
+                XElement element5 = document5.Element("host");
+                Console.WriteLine(element5);
+            }
+            Console.Read();
+        }
+       
+       
+
+    }       
+    }
+
+
